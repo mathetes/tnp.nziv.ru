@@ -1,0 +1,62 @@
+<% var data = { title: "Каталог продукции | АО НЗИВ", author: "Mathetes" }; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<!-- Page Content -->
+<div class="container wrapper">
+  <div class="row align-items-top my-5">
+    <div class="col-sm-12 col-lg-3 mediasize">
+      <%= _.template(require('./../includes/sidebar.html').default)(data) %>
+    </div>
+
+    <div class="col-sm-12 col-lg-9">
+      <div class="iconsblock">
+        <%= _.template(require('./../includes/iconsblock.html').default)(data)%>
+      </div>
+      <h2 class="product__heading animate__animated animate__backInDown">Каталог продукции</h2>
+      
+      <div class="card card-block">
+        <a class="card-title" href="tanks.html">
+          <img
+            class="card-img-top"
+            src="../../img/products/tank065.png"
+            alt="Банка 0,8 л."
+          />
+          <div class="card-body product-props">
+            <h5 class="card-title">Банки 0,45-0,8 л.</h5>    
+          </div>
+        </a>
+      </div>
+      <div class="card card-block">
+        <a class="card-title" href="buckets.html">
+          <img
+            class="card-img-top"
+            src="../../img/products/yellow_backet_5.png"
+            alt="Ведро 5 л."
+          />
+          <div class="card-body product-props">
+            <h5 class="card-title">Ведра 3-32 л.</h5>
+          </div>
+        </a>
+      </div>
+      <div class="card card-block">
+          <a class="card-title" href="covers.html">
+        <img
+          class="card-img-top"
+          src="../../img/products/blue_cover_21.png"
+          alt="Крышка ведра 5 л."
+        />
+        <div class="card-body product-props">
+          <h5 class="card-title">Крышки</h5>
+        </div>
+      </a>
+      </div>
+      <section>
+        <video width="100%" controls="controls">
+            <source src="img/russia24.mp4" type="video/mp4">
+        </video>
+    </section>
+    </div>
+  </div>
+</div>
+  <%= _.template(require('./../includes/footer.html').default)(data) %>
+</div>
