@@ -1,0 +1,16 @@
+// Icon block
+.icon__block {
+  margin-bottom: 50px;
+  display: inline-flexbox;
+  width: 100%;
+}
+.icon__block_picture {
+  max-width: 150px;
+  width: 100% !important;
+}
+.icon__block_title {
+  width: 400px;
+  text-align: center;
+  font-size: 1.5rem;
+  padding-bottom: 20px;
+}

@@ -1,0 +1,82 @@
+<% var data = { title: "Каталог - ведра | АО НЗИВ", author: "Mathetes" }; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<!-- Page Content -->
+<div class="container wrapper">
+  <div class="row align-items-top my-5">
+    <div class="col-sm-12 col-lg-3 mediasize">
+      <%= _.template(require('./../includes/sidebar.html').default)(data) %>
+    </div>
+
+    <div class="col-sm-12 col-lg-9">
+      <div class="iconsblock">
+        <%= _.template(require('./../includes/iconsblock.html').default)(data)%>
+      </div>
+      <h2 class="product__heading animate__animated animate__backInDown">Ведра</h2>
+      
+      
+      <div class="card card-block">
+        <a class="card-title" href="bucket3.html">
+          <img
+            class="card-img-top"
+            src="../../img/products/bucket3.png"
+            alt="Ведро 3 л."
+          />
+          <div class="card-body product-props">
+            <h5 class="card-title">Ведро 3  л.</h5>
+          </div>
+        </a>
+      </div>
+      <div class="card card-block">
+        <a class="card-title" href="bucket5.html">
+          <img
+            class="card-img-top"
+            src="../../img/products/bucket5.png"
+            alt="Ведро 5 л."
+          />
+          <div class="card-body product-props">
+            <h5 class="card-title">Ведро 5 л.</h5>
+          </div>
+        </a>
+      </div>
+      <div class="card card-block">
+        <a class="card-title" href="bucket10.html">
+          <img
+            class="card-img-top"
+            src="../../img/products/bucket10.png"
+            alt="Ведро 10 л."
+          />
+          <div class="card-body product-props">
+            <h5 class="card-title">Ведро 10 л.</h5>
+          </div>
+        </a>
+      </div>
+      <div class="card card-block">
+        <a class="card-title" href="bucket21.html">
+          <img
+            class="card-img-top"
+            src="../../img/products/bucket21.png"
+            alt="Ведро 21 литр"
+          />
+          <div class="card-body product-props">
+            <h5 class="card-title">Ведро 21 литр</h5>
+          </div>
+        </a>
+      </div>
+            <div class="card card-block">
+        <a class="card-title" href="tank32.html">
+        <img
+          class="card-img-top"
+          src="../../img/products/tank32.png"
+          alt="Бак 32 л."
+        />
+        <div class="card-body product-props">
+          <h5 class="card-title">Бак 32  л.</h5>
+        </div>
+      </a>
+      </div>
+    </div>
+  </div>
+</div>
+  <%= _.template(require('./../includes/footer.html').default)(data) %>
+</div>

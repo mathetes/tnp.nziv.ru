@@ -1,0 +1,111 @@
+// Sidebar menu
+
+.product {
+  overflow: hidden;
+}
+
+.product__title {
+  color: #000;
+  text-decoration: none;
+  margin-left: 20px;
+  &:hover {
+    color: #001f3e;
+    text-decoration: none;
+    font-weight: 700;
+  }
+}
+
+.product_item {
+  list-style: none;
+  padding-left: 20px;
+  margin-left: 5px;
+  &:hover {
+    background-color: #c82333;
+    border-radius: 3px;
+  }
+}
+.product_link {
+  line-height: 2.5rem;
+  color: #001f3e;
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+.product__pic {
+  width: 100% !important;
+}
+
+.product-props {
+  background-color: #c82333;
+}
+
+//Адаптивное меню
+.catalog-menu-headings {
+  background: #001f3e;
+  padding: 8px 15px 6px;
+}
+.catmenu-name {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+.catalog-menu-headings .bar-ico {
+  right: 7%;
+  top: 15px;
+  position: absolute;
+  color: #ffffff;
+  font-size: 1.4rem;
+}
+.catalog-navbar {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.1rem;
+  background-color: #001f3e;
+  padding: 0;
+}
+.catalog-navbar .navbar-brand {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  margin-left: 15px;
+}
+.catalog-navbar .navbar-brand:hover,
+.catalog-navbar .navbar-brand:focus {
+  color: #ffffff;
+}
+.catalog-navbar .navbar-collapse {
+  padding: 0;
+}
+.catalog-navbar .navbar-toggler {
+  font-size: 2.25rem;
+  border: 1px solid #001f3e;
+  margin-right: 15px;
+  color: #ffffff;
+}
+.catalog-navbar .navbar-nav .nav-item .nav-link {
+  display: block;
+  // border-bottom: 1px solid rgba(100%, 0%, 0%, 1);
+  padding-left: 26px;
+  padding-right: 20px;
+  color: #ffffff;
+  transition: 0.2s all ease-out;
+  position: relative;
+}
+.catalog-navbar .navbar-nav .nav-item .nav-link:hover,
+.catalog-navbar .navbar-nav .nav-item .nav-link:focus {
+  // background-color: red;
+  color: #fdf301;
+}
+// .catalog-navbar .navbar-nav .nav-item .nav-link:before {
+//   font-family: FontAwesome;
+//   content: "\f0c8";
+//   position: absolute;
+//   left: 10px;
+//   top: 14px;
+//   font-size: 0.6rem;
+// }

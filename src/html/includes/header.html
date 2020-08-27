@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+	
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NK4L7T6');</script>
+<!-- End Google Tag Manager -->
+
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+    <link rel="stylesheet" href="css/style.bundle.css" />
+    <link
+      rel="stylesheet"
+      href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+
+    <title><%=title%></title>
+  </head>
+  <body cz-shortcut-listen="true">
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NK4L7T6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <div
+      class="modal fade"
+      id="call_me_modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="call_me_ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="call_me_ModalLabel">
+              Перезвоните мне:
+            </h4>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="call_me_form" method="POST" action="/php/call_me_sendMail.php">
+              <div class="form-group">
+                <label for="recipient-name" class="form-control-label"
+                  >Представьтесь пожалуйста:</label
+                >
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <icon class="fa fa-2x fa-user"></icon>
+                  </div>
+                  &nbsp;
+                  <input
+                    required=""
+                    class="form-control"
+                    id="recipient-name"
+                    name="recipient-name"
+                    placeholder="Фамилия Имя Отчество"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="form-control-label"
+                  >Телефон для связи:</label
+                >
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <icon class="fa fa-2x fa-phone"></icon>
+                  </div>
+                  &nbsp;
+                  <input
+                    required=""
+                    class="form-control"
+                    id="recipient_phone"
+                    name="recipient_phone"
+                    placeholder="+7(xxx)-xxx-xx-xx"
+                  />
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary float-left">
+                Заказать звонок
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary float-right"
+                data-dismiss="modal"
+              >
+                Закрыть
+              </button>
+            </form>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="order_modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="orderModalLabel"
+      aria-hidden="true"
+      style="display: none;"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="orderModalLabel">
+              Запросить коммерческое предложение:
+            </h4>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="order_form" method="POST"  enctype="multipart/form-data" action="/php/order_sendMail.php">
+              <div class="form-group">
+                <label for="message-text" class="form-control-label"
+                  >Ваше имя:</label
+                >
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <icon class="fa fa-2x fa-user"></icon>
+                  </div>
+                  &nbsp;
+                  <input
+                    required=""
+                    class="form-control"
+                    id="recipient-name"
+                    name="recipient-name"
+                    placeholder="Ваше ФИО"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="form-control-label"
+                  >Компания:</label
+                >
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <icon class="fa fa-2x fa-building"></icon>
+                  </div>
+                  &nbsp;
+                  <input
+                    required=""
+                    class="form-control"
+                    id="recipient-сompany"
+                    name="recipient-сompany"
+                    placeholder="Название вашей компании"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="form-control-label"
+                  >Ваш EMAIL:</label
+                >
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <icon class="fa fa-2x fa-envelope"></icon>
+                  </div>
+                  &nbsp;
+                  <input
+                    type="email"
+                    required=""
+                    class="form-control"
+                    id="recipient-email"
+                    name="recipient-email"
+                    placeholder="fio@company.org"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="form-control-label"
+                  >Сообщение:</label
+                >
+                <textarea
+                  required=""
+                  class="form-control"
+                  id="recipient-message"
+                  name="recipient-message"
+                ></textarea>
+              </div>
+			  
+			  <div class="form-group">
+				<input id="download-group-checkbox" type="checkbox" onclick="toggleDownload();"> Загрузить допольнительные документы
+			  </div>
+			  <div id="download-group" class="form-group d-none">			                                             
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <icon class="fa fa-2x fa-upload"></icon>
+                  </div>
+                  &nbsp;
+                  <input					
+                    type="file"                    
+                    class="form-control"
+                    id="recipient-file"
+                    name="recipient-file"                    
+                  />
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary float-left">
+                Отправить
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary float-right"
+                data-dismiss="modal"
+              >
+                Закрыть
+              </button>
+            </form>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav__wrapper">
+      <div class="container">
+        <a target="_blank" href="http://nziv.ru" class="navbar-brand"
+          ><img
+            class="logonziv"
+            src="../../img/logonziv.png"
+            alt="АО НЗИВ логотип"
+          />
+        </a>
+        <div class="navbar__block">
+          <ul class="navbar-nav nav-item-link">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Главная</a>
+            </li>
+            <li class="nav-item active">
+              <a
+				target="_blank"
+                class="nav-link"
+                href="https://nziv.ru/kompetencii/cex-po-proizvodstvu-izdelij-iz-plastmass/"
+                >Производство</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+          <div class="phone__block">
+            <a href="tel:+7-968-222-00-52" class="phone_link"
+              ><span class="phone_number">8-968-222-00-52 </span></a
+            >
+            <a href="https://wa.me/7-968-222-00-52">
+              <img
+                class="phone__icon"
+                src="./../../img/whatsapp.png"
+                alt="whatsapp"
+              />
+            </a>
+            <a
+              href="tg://msg?text=<?php echo urlencode( '<TEXT>' ); ?>&to=<PHONE>"
+            >
+              <img
+                class="phone__icon"
+                src="./../../img/telegapop.png"
+                alt="telegram"
+              />
+            </a>
+          </div>
+          <div class="callme__block">
+            <div class="bd-example">
+              <button
+                type="button"
+                class="btn btn-danger modalbutton__callme"
+                data-toggle="modal"
+                data-target="#call_me_modal"
+                data-whatever="@mdo"
+              >
+                Перезвоните мне
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+	<script type="text/javascript">	
+		function toggleDownload(){					
+			let c=document.getElementById('download-group-checkbox');			
+			if (c.checked){
+				document.getElementById('download-group').className=document.getElementById('download-group').className.replace('d-none','');
+				document.getElementById('recipient-file').disabled=false;
+			}else{
+				document.getElementById('download-group').className=document.getElementById('download-group').className+' d-none';
+				document.getElementById('recipient-file').disabled=true;
+			}
+		}
+		document.getElementById('call_me_form').onsubmit=function(){
+			dataLayer.push({'event': 'order_callback'});
+		}
+		document.getElementById('order_form').onsubmit=function(){
+			dataLayer.push({'event': 'order'});
+		}		
+	</script>
+  </body>
+</html>

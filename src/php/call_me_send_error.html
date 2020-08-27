@@ -1,0 +1,459 @@
+
+ <!DOCTYPE html>
+ <html lang="ru">
+   <head>
+     <meta charset="utf-8" />
+     <meta
+       name="viewport"
+       content="width=device-width, initial-scale=1, shrink-to-fit=no"
+     />
+ 
+     <link rel="shortcut icon" href="favicon/favicon.ico" />
+     <link
+       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+       rel="stylesheet"
+       integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+       crossorigin="anonymous"
+     />
+     <link
+       rel="stylesheet"
+       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+     />
+     <link rel="stylesheet" href="css/style.bundle.css" />
+     <link
+       rel="stylesheet"
+       href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"
+     />
+ 
+     <title>Бак 32 л. | АО НЗИВ</title>
+   </head>
+   <body cz-shortcut-listen="true">
+     <div
+       class="modal fade"
+       id="call_me_modal"
+       tabindex="-1"
+       role="dialog"
+       aria-labelledby="call_me_ModalLabel"
+       aria-hidden="true"
+     >
+       <div class="modal-dialog" role="document">
+         <div class="modal-content">
+           <div class="modal-header">
+             <h4 class="modal-title" id="call_me_ModalLabel">
+               Перезвоните мне:
+             </h4>
+             <button
+               type="button"
+               class="close"
+               data-dismiss="modal"
+               aria-label="Close"
+             >
+               <span aria-hidden="true">×</span>
+             </button>
+           </div>
+           <div class="modal-body">
+             <form method="POST" action="/php/call_me_sendMail.php">
+               <div class="form-group">
+                 <label for="recipient-name" class="form-control-label"
+                   >Представьтесь пожалуйста:</label
+                 >
+                 <div class="input-group mb-3">
+                   <div class="input-group-prepend">
+                     <icon class="fa fa-2x fa-user"></icon>
+                   </div>
+                   &nbsp;
+                   <input
+                     required=""
+                     class="form-control"
+                     id="recipient-name"
+                     name="recipient-name"
+                     placeholder="Фамилия Имя Отчество"
+                   />
+                 </div>
+               </div>
+               <div class="form-group">
+                 <label for="message-text" class="form-control-label"
+                   >Телефон для связи:</label
+                 >
+                 <div class="input-group mb-3">
+                   <div class="input-group-prepend">
+                     <icon class="fa fa-2x fa-phone"></icon>
+                   </div>
+                   &nbsp;
+                   <input
+                     required=""
+                     class="form-control"
+                     id="recipient_phone"
+                     name="recipient_phone"
+                     placeholder="+7(xxx)-xxx-xx-xx"
+                   />
+                 </div>
+               </div>
+               <button type="submit" class="btn btn-primary float-left">
+                 Заказать звонок
+               </button>
+               <button
+                 type="button"
+                 class="btn btn-secondary float-right"
+                 data-dismiss="modal"
+               >
+                 Закрыть
+               </button>
+             </form>
+           </div>
+           <div class="modal-footer"></div>
+         </div>
+       </div>
+     </div>
+     <div
+       class="modal fade"
+       id="order_modal"
+       tabindex="-1"
+       role="dialog"
+       aria-labelledby="orderModalLabel"
+       aria-hidden="true"
+       style="display: none;"
+     >
+       <div class="modal-dialog" role="document">
+         <div class="modal-content">
+           <div class="modal-header">
+             <h4 class="modal-title" id="orderModalLabel">
+               Запросить коммерческое предложение:
+             </h4>
+             <button
+               type="button"
+               class="close"
+               data-dismiss="modal"
+               aria-label="Close"
+             >
+               <span aria-hidden="true">×</span>
+             </button>
+           </div>
+           <div class="modal-body">
+             <form method="POST" action="/php/order_sendMail.php">
+               <div class="form-group">
+                 <label for="message-text" class="form-control-label"
+                   >Ваше имя:</label
+                 >
+                 <div class="input-group mb-3">
+                   <div class="input-group-prepend">
+                     <icon class="fa fa-2x fa-user"></icon>
+                   </div>
+                   &nbsp;
+                   <input
+                     required=""
+                     class="form-control"
+                     id="recipient-name"
+                     name="recipient-name"
+                     placeholder="Ваше ФИО"
+                   />
+                 </div>
+               </div>
+               <div class="form-group">
+                 <label for="message-text" class="form-control-label"
+                   >Компания:</label
+                 >
+                 <div class="input-group mb-3">
+                   <div class="input-group-prepend">
+                     <icon class="fa fa-2x fa-building"></icon>
+                   </div>
+                   &nbsp;
+                   <input
+                     required=""
+                     class="form-control"
+                     id="recipient-сompany"
+                     name="recipient-сompany"
+                     placeholder="Название вашей компании"
+                   />
+                 </div>
+               </div>
+               <div class="form-group">
+                 <label for="message-text" class="form-control-label"
+                   >Ваш EMAIL:</label
+                 >
+                 <div class="input-group mb-3">
+                   <div class="input-group-prepend">
+                     <icon class="fa fa-2x fa-envelope"></icon>
+                   </div>
+                   &nbsp;
+                   <input
+                     type="email"
+                     required=""
+                     class="form-control"
+                     id="recipient-email"
+                     name="recipient-email"
+                     placeholder="fio@company.org"
+                   />
+                 </div>
+               </div>
+               <div class="form-group">
+                 <label for="recipient-name" class="form-control-label"
+                   >Сообщение:</label
+                 >
+                 <textarea
+                   required=""
+                   class="form-control"
+                   id="recipient-message"
+                   name="recipient-message"
+                 ></textarea>
+               </div>
+               <button type="submit" class="btn btn-primary float-left">
+                 Отправить
+               </button>
+               <button
+                 type="button"
+                 class="btn btn-secondary float-right"
+                 data-dismiss="modal"
+               >
+                 Закрыть
+               </button>
+             </form>
+           </div>
+           <div class="modal-footer"></div>
+         </div>
+       </div>
+     </div>
+     <nav
+       class="navbar navbar-expand-lg navbar-dark fixed-top nav__wrapper"
+       style=""
+     >
+       <div class="container">
+         <a class="navbar-brand" href="https://nziv.ru/"
+           ><img
+             class="logonziv"
+             src="../../img/logonziv.png"
+             alt="АО НЗИВ логотип"
+           /> </a
+         ><button
+           class="navbar-toggler"
+           type="button"
+           data-toggle="collapse"
+           data-target="#navbarResponsive"
+           aria-controls="navbarResponsive"
+           aria-expanded="false"
+           aria-label="Toggle navigation"
+         >
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div
+           class="collapse navbar-collapse navbar__block"
+           id="navbarResponsive"
+         >
+           <ul class="navbar-nav nav-item-link">
+             <li class="nav-item active">
+               <a class="nav-link" href="/">Главная</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="contacts.html">Контакты</a>
+             </li>
+           </ul>
+           <div class="phone__block">
+             <a href="tel:+7-968-222-00-52" class="phone_link"
+               ><span class="phone_number">8-968-222-00-52 </span
+               ><img
+                 class="phone__icon"
+                 src="./../../img/whatsapp.png"
+                 alt="whatsapp"
+               />
+               <img
+                 class="phone__icon"
+                 src="./../../img/telegapop.png"
+                 alt="telegram"
+               />
+             </a>
+           </div>
+           <div class="callme__block">
+             <div class="bd-example">
+               <button
+                 type="button"
+                 class="btn btn-danger modalbutton__callme"
+                 data-toggle="modal"
+                 data-target="#call_me_modal"
+                 data-whatever="@mdo"
+               >
+                 Перезвоните мне
+               </button>
+             </div>
+           </div>
+         </div>
+       </div>
+     </nav>
+   </body>
+ </html>
+ 
+ 
+ <!-- Page Content -->
+ <div class="container wrapper">
+   <div class="row align-items-top my-5">
+     <div class="col-sm-12 col-lg-3 mediasize">
+       <sidebar>
+   <h4><a class="product__title" href="/">Каталог</a></h4>
+   <nav>
+     <li class="product_item nav-item">
+       <a class="product_link nav-link" href="tank045.html">Банка 0,45 л.</a>
+     </li>
+     <li class="product_item nav-item">
+       <a class="product_link nav-link" href="tank065.html">Банка 0,65 л.</a>
+     </li>
+     <li class="product_item nav-item">
+       <a class="product_link nav-link" href="tank08.html">Банка 0,8 л.</a>
+     </li>
+     <li class="product_item nav-item">
+       <a class="product_link nav-link" href="cover08.html">Крышка 0,45-0,8 л.</a>
+     </li>
+     <li class="product_item nav-item">
+       <a class="product_link nav-link" href="bucket3.html">Ведро 3,0 л.</a>
+     </li>
+     <li class="product_item nav-item">
+       <a class="product_link nav-link" href="bucket5.html">Ведро 5,0 л.</a>
+     </li>
+     <li class="product_item nav-item">
+       <a class="product_link nav-link" href="bucket10.html">Ведро 10,0 л.</a>
+     </li>
+     <li class="product_item nav-item">
+       <a class="product_link nav-link" href="bucket21.html">Ведро 21,0 л.</a>
+     </li>
+     <li class="product_item nav-item">
+       <a class="product_link nav-link" href="cover3.html">Крышка ведра 3,0 л.</a>
+     </li>
+     <li class="product_item nav-item">
+       <a class="product_link nav-link" href="cover5.html">Крышка ведра 5,0 л.</a>
+     </li>
+     <li class="product_item nav-item">
+       <a class="product_link nav-link" href="cover10.html">Крышка ведра 10,0 л.</a>
+     </li>
+     <li class="product_item nav-item">
+       <a class="product_link nav-link" href="cover21.html">Крышка ведра 21,0 л.</a>
+     </li>
+     <li class="product_item nav-item">
+       <a class="product_link nav-link" href="tank32.html">Бак 32,0 л.</a>
+     </li>
+     <li class="product_item nav-item">
+       <a class="product_link nav-link" href="cover32.html">Крышка бака 32,0 л.</a>
+     </li>
+   </nav>
+ </sidebar>
+ 
+     </div>
+ 
+     <div class="col-sm-12 col-lg-9 sidebar__block">
+       <div class="iconsblock">
+         <section>
+   <div class="icon__block">
+     <table>
+       <tr>
+         <td class="icon__block_title">Предназначается для:</td>
+         <td class="icon__block_title">Используется для:</td>
+       </tr>
+     </table>
+ 
+     <div class="caracter__card">
+       <img
+         class="icon__block_picture"
+         src="../../img/icons/food.png"
+         alt="Преимущество №"
+       />
+       <div class="caracter__card_body">
+         <div class="icon__link" href="#">
+           Пищевая продукция
+         </div>
+       </div>
+     </div>
+ 
+     <div class="caracter__card">
+       <img
+         class="icon__block_picture"
+         src="../../img/icons/paint.png"
+         alt="Преимущество №"
+       />
+       <div class="caracter__card_body">
+         <div class="icon__link" href="#">
+           Лакокрасочная продукция
+         </div>
+       </div>
+     </div>
+ 
+     <div class="caracter__card">
+       <img
+         class="icon__block_picture"
+         src="../../img/icons/build.png"
+         alt="Преимущество №"
+       />
+       <div class="caracter__card_body">
+         <div class="icon__link" href="#">
+           Строительная продукция
+         </div>
+       </div>
+     </div>
+     <div class="caracter__card">
+       <img
+         class="icon__block_picture"
+         src="../../img/icons/pack.png"
+         alt="Преимущество №"
+       />
+       <div class="caracter__card_body">
+         <div class="icon__link" href="#">
+           Упаковка
+         </div>
+       </div>
+     </div>
+ 
+     <div class="caracter__card">
+       <img
+         class="icon__block_picture"
+         src="../../img/icons/transport.png"
+         alt="Преимущество №"
+       />
+       <div class="caracter__card_body">
+         <div class="icon__link" href="#">
+           Транспортировка
+         </div>
+       </div>
+     </div>
+ 
+     <div class="caracter__card">
+       <img
+         class="icon__block_picture"
+         src="../../img/icons/safe.png"
+         alt="Преимущество №"
+       />
+       <div class="caracter__card_body">
+         <div class="icon__link" href="#">
+           Хранение
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ 
+       </div>
+       <h2 class="announcement">
+        При отправке вашего сообщение возникла ошибка, повторите ваш запрос еще раз.
+       </h2>
+     </div>
+   </div>
+   <div class="row">
+   <div class="offset-lg-3 col-lg-9">
+     <img
+       class="features__image"
+       src="../../img/features.png"
+       alt="Уникальное товарное предложение"
+     />
+   </div>
+ </div>
+ 
+ </div>
+ 
+ <footer class="footer__block">
+   <div class="container">
+     <p class="text-muted">Акционерное общество "Новосибирский завод искусственного волокна"</p>	 
+   
+   </div>
+ </footer>
+ 
+   <script src="../../../node_modules/jquery/dist/jquery.slim.min.js"></script>
+ 
+     <script src="js/bundle.js"></script>
+ 
+   </body>
+ </html>

@@ -1,0 +1,12 @@
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+  .modalbutton__callme {
+    min-width: 100px;
+    background-color: #d63944;
+  }
+  .navbar__block {
+    position: relative;
+    width: 100%;
+    display: inline-grid;
+  }
+}

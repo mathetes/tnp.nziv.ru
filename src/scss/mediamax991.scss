@@ -1,0 +1,55 @@
+@media (max-width: 991.98px) {
+  .catalog-menu-headings {
+    display: none;
+  }
+  .wrapper {
+    margin-top: 190px;
+  }
+
+  .mediasize {
+    margin-bottom: 30px;
+  }
+
+  .navbar-brand {
+    width: 100%;
+    text-align: center;
+  }
+  .nav__wrapper {
+    height: 155px;
+  }
+  .logonziv {
+    width: 15rem;
+    margin-bottom: 20px;
+  }
+
+  .nav-item-link {
+    text-transform: uppercase;
+    display: -webkit-inline-box;
+    margin-left: 0px;
+    width: 46%;
+  }
+
+  .nav-link {
+    margin-right: 25px;
+  }
+
+  .phone__block {
+    padding-top: 5px;
+    margin-left: 0;
+    text-align: right;
+  }
+
+  .phone__icon {
+    width: 15px;
+  }
+  .image__block {
+    margin-right: 10px;
+  }
+
+  sidebar {
+    position: inherit;
+  }
+  .card-block {
+    width: 32.4%;
+  }
+}

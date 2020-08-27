@@ -1,0 +1,12 @@
+/* Landscape phones and portrait tablets */
+@media (min-width: 481px) and (max-width: 767px) {
+  .modalbutton__callme {
+    min-width: 100px;
+    background-color: #d63944;
+  }
+  .navbar__block {
+    position: relative;
+    width: 100%;
+    display: inline-grid;
+  }
+}

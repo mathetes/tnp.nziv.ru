@@ -1,0 +1,16 @@
+{
+    "name": "nziv/tara",
+    "description": "nziv tara site php scripts",
+    "type": "library",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "hivensil",
+            "email": "hivensil@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "phpmailer/phpmailer": "dev-master"
+    }
+}

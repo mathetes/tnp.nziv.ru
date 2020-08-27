@@ -1,0 +1,47 @@
+$font-stack: -apple-system, BlinkMacSystemFont, Roboto, "Open Sans",
+  "Helvetica Neue", sans-serif;
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@import "~bootstrap/scss/bootstrap";
+@import "./wrapper";
+@import "./nav";
+@import "./phone";
+@import "./modals";
+@import "./icons";
+@import "./catalog";
+@import "./sidebar";
+@import "./tables";
+@import "./slider";
+@import "./footer";
+@import "./media1200";
+@import "./mediamin992.scss";
+@import "./mediamax991.scss";
+@import "./media992";
+@import "./media768";
+@import "./media480";
+
+.wrapper {
+  min-width: 400px;
+}
+
+.nav__wrapper {
+  min-width: 400px;
+}
+// Blocks
+.caracters__block {
+  display: inline-block;
+  width: 56%;
+  float: right;
+}
+
+// Features image
+.features__image {
+  width: 100%;
+  margin-bottom: 30px;
+}

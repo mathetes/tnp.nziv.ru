@@ -1,0 +1,26 @@
+// Таблица характеристик
+.caracters__heading {
+  padding: 0.5rem 0.75rem !important;
+  font-size: 1.3rem;
+  color: #fff;
+  background-color: #001f3e;
+}
+
+.caracter__card {
+  display: inline-block !important;
+  border: 0 !important;
+  width: 16%;
+  height: auto;
+}
+
+.icon__link {
+  color: #001f3e;
+  font-size: 0.6rem;
+}
+.caracter__card_body {
+  text-align: center;
+}
+
+table tr {
+  line-height: 1 !important;
+}
