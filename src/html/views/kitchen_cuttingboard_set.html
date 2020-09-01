@@ -1,0 +1,37 @@
+<% var data = { title: "Товары для кухни | АО НЗИВ", author: "Mathetes" }; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<!-- Page Content -->
+<div class="container wrapper">
+  <div class="row align-items-top my-5">
+    <div class="col-sm-12 col-lg-3 mediasize">
+      <%= _.template(require('./../includes/sidebar.html').default)(data) %>
+    </div>
+
+    <div class="col-sm-12 col-lg-9 sidebar__block">
+      <div class="iconsblock">
+        <%= _.template(require('./../includes/iconsblock.html').default)(data)
+        %>
+      </div>
+      <h2 class="product__heading animate__animated animate__backInDown">
+        Ведро 3 л.
+      </h2>
+      <div class="image__block animate__animated animate__backInLeft">
+        <%=
+        _.template(require('./../includes/kitchen_products/kitchen_cuttingboard_set_slider.html').default)(data)
+        %> <%=
+        _.template(require('./../includes/modalorder.html').default)(data) %>
+      </div>
+      <div class="caracters__block animate__animated animate__backInRight">
+        <h2 class="font-weight-light caracters__heading">
+          Характеристики изделия
+        </h2>
+        <%=
+        _.template(require('./../includes/kitchen_products/kitchen_cuttingboard_set_table.html').default)(data)
+        %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>
