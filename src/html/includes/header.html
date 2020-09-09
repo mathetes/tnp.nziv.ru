@@ -140,7 +140,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <form id="order_form" method="POST"  enctype="multipart/form-data" action="/php/order_sendMail.php">
               <div class="form-group">
                 <label for="message-text" class="form-control-label"
-                  >Ваше имя:</label
+                  >Ваше имя (*):</label
                 >
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
@@ -158,7 +158,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
               <div class="form-group">
                 <label for="message-text" class="form-control-label"
-                  >Компания:</label
+                  >Компания (*):</label
                 >
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
@@ -174,9 +174,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   />
                 </div>
               </div>
+			   <div class="form-group">
+                <label for="message-text" class="form-control-label"
+                  >Телефон:</label
+                >
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <icon class="fa fa-2x fa-phone" style="color:#c0c0c0"></icon>
+                  </div>
+                  &nbsp;
+                  <input
+                    type="phone"                    
+                    class="form-control"
+                    id="recipient-phone"
+                    name="recipient-phone"
+                    placeholder="+7(999)-999-99-99"
+                  />
+                </div>
+              </div>
               <div class="form-group">
                 <label for="message-text" class="form-control-label"
-                  >Ваш EMAIL:</label
+                  >Ваш EMAIL (*):</label
                 >
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
@@ -195,7 +213,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
               <div class="form-group">
                 <label for="recipient-name" class="form-control-label"
-                  >Сообщение:</label
+                  >Сообщение (*):</label
                 >
                 <textarea
                   required=""
@@ -206,7 +224,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
 			  
 			  <div class="form-group">
-				<input id="download-group-checkbox" type="checkbox" onclick="toggleDownload();"> Загрузить допольнительные документы
+				<input id="download-group-checkbox" type="checkbox" onclick="toggleDownload();"> Загрузить дополнительные документы
 			  </div>
 			  <div id="download-group" class="form-group d-none">			                                             
                 <div class="input-group mb-3">
@@ -318,6 +336,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		document.getElementById('order_form').onsubmit=function(){
 			dataLayer.push({'event': 'order'});
 		}		
+		window.onload=function(){
+			var im = new Inputmask("\\+\\7(999)-999-99-99");
+			im.mask(document.getElementById("recipient_phone"));
+			im.mask(document.getElementById("recipient-phone"));
+		}
+		
 	</script>
   </body>
 </html>

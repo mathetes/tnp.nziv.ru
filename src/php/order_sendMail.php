@@ -36,7 +36,7 @@ try {
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Запрос коммерческого предложения';
     $mail->Body    = 
-    'ФИО: '.$_POST['recipient-name'].',Компания: '.$_POST['recipient-сompany'].',EMAIL: '.$_POST['recipient-email'].', Сообщение: '.$_POST['recipient-message'];
+    'ФИО: '.$_POST['recipient-name'].',Компания: '.$_POST['recipient-сompany'].', Телефон: '.$_POST['recipient-phone'].',EMAIL: '.$_POST['recipient-email'].', Сообщение: '.$_POST['recipient-message'];
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 	if (isset($_FILES['recipient-file']) &&
     $_FILES['recipient-file']['error'] == UPLOAD_ERR_OK) {
