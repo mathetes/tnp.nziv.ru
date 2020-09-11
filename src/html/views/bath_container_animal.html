@@ -1,5 +1,6 @@
-<% var data = { title: "Ваза для фруктов | АО НЗИВ", author: "Mathetes" }; %>
-<%= _.template(require('./../includes/header.html').default)(data) %>
+<% var data = { title: "Контейнер 5 л. под корм для животных | АО НЗИВ", author:
+"Mathetes" }; %> <%=
+_.template(require('./../includes/header.html').default)(data) %>
 
 <!-- Page Content -->
 <div class="container wrapper">
@@ -14,11 +15,11 @@
         %>
       </div>
       <h2 class="product__heading animate__animated animate__backInDown">
-        Ваза для фруктов
+        Контейнер 5 л. под корм для животных
       </h2>
       <div class="image__block animate__animated animate__backInLeft">
         <%=
-        _.template(require('./../includes/kitchen_products/kitchen_fruits_vase_slider.html').default)(data)
+        _.template(require('./../includes/bath_accessories/bath_container_slider.html').default)(data)
         %> <%=
         _.template(require('./../includes/modalorder.html').default)(data) %>
       </div>
@@ -27,7 +28,7 @@
           Характеристики изделия
         </h2>
         <%=
-        _.template(require('./../includes/kitchen_products/kitchen_fruits_vase_table.html').default)(data)
+        _.template(require('./../includes/bath_accessories/bath_container_table.html').default)(data)
         %>
       </div>
     </div>

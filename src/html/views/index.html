@@ -12,51 +12,59 @@
       <div class="iconsblock">
         <%= _.template(require('./../includes/iconsblock.html').default)(data)%>
       </div>
-      <h2 class="product__heading animate__animated animate__backInDown">Каталог продукции</h2>
-      
+      <h2 class="product__heading animate__animated animate__backInDown">
+        Каталог продукции
+      </h2>
+
       <div class="card card-block">
-        <a class="card-title" href="tanks.html">
+        <a class="card-title" href="bath.html">
           <img
             class="card-img-top"
-            src="../../img/products/tank065.png"
-            alt="Банка 0,8 л."
+            src="../../img/products/bath_accessories.jpg"
+            alt="Аксессуары для ванной и туалета"
           />
           <div class="card-body product-props">
-            <h5 class="card-title">Банки 0,45-0,8 л.</h5>    
+            <h5 class="card-title">Аксессуары для ванной и туалета</h5>
           </div>
         </a>
       </div>
       <div class="card card-block">
-        <a class="card-title" href="buckets.html">
+        <a class="card-title" href="office.html">
           <img
             class="card-img-top"
-            src="../../img/products/yellow_backet_5.png"
-            alt="Ведро 5 л."
+            src="../../img/products/office_products.jpg"
+            alt="Канцелярские товары"
           />
           <div class="card-body product-props">
-            <h5 class="card-title">Ведра 3-32 л.</h5>
+            <h5 class="card-title">Канцелярские товары</h5>
           </div>
         </a>
       </div>
       <div class="card card-block">
-          <a class="card-title" href="covers.html">
-        <img
-          class="card-img-top"
-          src="../../img/products/blue_cover_21.png"
-          alt="Крышка ведра 5 л."
-        />
-        <div class="card-body product-props">
-          <h5 class="card-title">Крышки</h5>
-        </div>
-      </a>
+        <a class="card-title" href="kitchen.html">
+          <img
+            class="card-img-top"
+            src="../../img/products/kitchen_profucts.jpg"
+            alt="Товары для кухни"
+          />
+          <div class="card-body product-props">
+            <h5 class="card-title">Товары для кухни</h5>
+          </div>
+        </a>
       </div>
-      <section>
-        <video width="100%" controls="controls">
-            <source src="img/russia24.mp4" type="video/mp4">
-        </video>
-    </section>
+      <div class="card card-block">
+        <a class="card-title" href="garden.html">
+          <img
+            class="card-img-top"
+            src="../../img/products/garden_products.jpg"
+            alt="Товары для сада и огорода"
+          />
+          <div class="card-body product-props">
+            <h5 class="card-title">Товары для сада и огорода</h5>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
-</div>
   <%= _.template(require('./../includes/footer.html').default)(data) %>
 </div>

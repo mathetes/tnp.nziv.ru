@@ -1,0 +1,36 @@
+<% var data = { title: "Каталог продукции | АО НЗИВ", author: "Mathetes" }; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<!-- Page Content -->
+<div class="container wrapper">
+  <div class="row align-items-top my-5">
+    <div class="col-sm-12 col-lg-3 mediasize">
+      <%= _.template(require('./../includes/sidebar.html').default)(data) %>
+    </div>
+
+    <div class="col-sm-12 col-lg-9">
+      <div class="iconsblock">
+        <%= _.template(require('./../includes/iconsblock.html').default)(data)%>
+      </div>
+      <h2 class="product__heading animate__animated animate__backInDown">
+        Каталог товаров для огорода и сада
+      </h2>
+      <div class="card card-block"><a class="card-title" href="garden_balcony_box.html"><img class="card-img-top"src="../../img/products/garden_products/garden_balcony_box.jpg" alt="Ящик балконный для цветов" /><div class=card-body product-props"><h5 class="card-title">Ящик балконный для цветов</h5></div></a></div>
+      <div class="card card-block"><a class="card-title" href="garden_seedling_box.html"><img class="card-img-top"src="../../img/products/garden_products/garden_seedling_box.jpg" alt="Ящик для рассады" /><div class=card-body product-props"><h5 class="card-title">Ящик для рассады</h5></div></a></div>
+      <div class="card card-block"><a class="card-title" href="garden_backet_8.html"><img class="card-img-top"src="../../img/products/garden_products/garden_backet_8.jpg" alt="Ведро  8 л." /><div class=card-body product-props"><h5 class="card-title">Ведро  8 л.</h5></div></a></div>
+      <div class="card card-block"><a class="card-title" href="garden_basket_12.html"><img class="card-img-top"src="../../img/products/garden_products/garden_basket_12.jpg" alt="Ведро 12 л." /><div class=card-body product-props"><h5 class="card-title">Ведро 12 л.</h5></div></a></div>
+      <div class="card card-block"><a class="card-title" href="garden_cover_12.html"><img class="card-img-top"src="../../img/products/garden_products/garden_cover_12.jpg" alt="Крышка 12 л." /><div class=card-body product-props"><h5 class="card-title">Крышка 12 л.</h5></div></a></div>
+      <div class="card card-block"><a class="card-title" href="garden_backet_breeze.html"><img class="card-img-top"src="../../img/products/garden_products/garden_backet_breeze.jpg" alt="Ведро "Бриз" 10 л. " /><div class=card-body product-props"><h5 class="card-title">Ведро "Бриз" 10 л. </h5></div></a></div>
+      <div class="card card-block"><a class="card-title" href="garden_backet_breeze.html"><img class="card-img-top"src="../../img/products/garden_products/garden_backet_breeze.jpg" alt="Ведро "Бриз" 13 л." /><div class=card-body product-props"><h5 class="card-title">Ведро "Бриз" 13 л.</h5></div></a></div>
+      <div class="card card-block"><a class="card-title" href="garden_backet_breeze.html"><img class="card-img-top"src="../../img/products/garden_products/garden_backet_breeze.jpg" alt="Ведро "Бриз" 8 л." /><div class=card-body product-props"><h5 class="card-title">Ведро "Бриз" 8 л.</h5></div></a></div>
+      <div class="card card-block"><a class="card-title" href="garden_big_pots.html"><img class="card-img-top"src="../../img/products/garden_products/garden_big_pots.jpg" alt="Кашпо большое 3 л." /><div class=card-body product-props"><h5 class="card-title">Кашпо большое 3 л.</h5></div></a></div>
+      <div class="card card-block"><a class="card-title" href="garden_outdoors_pots.html"><img class="card-img-top"src="../../img/products/garden_products/garden_outdoors_pots.jpg" alt="Кашпо напольное" /><div class=card-body product-props"><h5 class="card-title">Кашпо напольное</h5></div></a></div>
+      <div class="card card-block"><a class="card-title" href="garden_suspension_pots.html"><img class="card-img-top"src="../../img/products/garden_products/garden_suspension_pots.jpg" alt="Кашпо с подвесом" /><div class=card-body product-props"><h5 class="card-title">Кашпо с подвесом</h5></div></a></div>
+      <div class="card card-block"><a class="card-title" href="garden_tulip_pots.html"><img class="card-img-top"src="../../img/products/garden_products/garden_tulip_pots.jpg" alt="Кашпо тюльпан" /><div class=card-body product-props"><h5 class="card-title">Кашпо тюльпан</h5></div></a></div>
+      <div class="card card-block"><a class="card-title" href="garden_pelvis_breeze8.html"><img class="card-img-top"src="../../img/products/garden_products/garden_pelvis_breeze8.jpg" alt="Таз «Бриз» 8 л." /><div class=card-body product-props"><h5 class="card-title">Таз «Бриз» 8 л.</h5></div></a></div>
+      <div class="card card-block"><a class="card-title" href="garden_pelvis_breeze10.html"><img class="card-img-top"src="../../img/products/garden_products/garden_pelvis_breeze10.jpg" alt="Таз  «Бриз» 10 л." /><div class=card-body product-props"><h5 class="card-title">Таз  «Бриз» 10 л.</h5></div></a></div>
+      <div class="card card-block"><a class="card-title" href="garden_pelvis_breeze16.html"><img class="card-img-top"src="../../img/products/garden_products/garden_pelvis_breeze16.jpg" alt="Таз «Бриз» 16 л." /><div class=card-body product-props"><h5 class="card-title">Таз «Бриз» 16 л.</h5></div></a></div>
+    </div>
+  </div>
+  <%= _.template(require('./../includes/footer.html').default)(data) %>
+</div>

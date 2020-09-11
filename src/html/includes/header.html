@@ -6,10 +6,6 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-	
-	<!-- Google Tag Manager -->
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NK4L7T6');</script>
-<!-- End Google Tag Manager -->
 
     <link rel="shortcut icon" href="favicon/favicon.ico" />
     <link
@@ -31,10 +27,6 @@
     <title><%=title%></title>
   </head>
   <body cz-shortcut-listen="true">
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NK4L7T6"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
     <div
       class="modal fade"
       id="call_me_modal"
@@ -59,7 +51,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </button>
           </div>
           <div class="modal-body">
-            <form id="call_me_form" method="POST" action="/php/call_me_sendMail.php">
+            <form
+              id="call_me_form"
+              method="POST"
+              action="/php/call_me_sendMail.php"
+            >
               <div class="form-group">
                 <label for="recipient-name" class="form-control-label"
                   >Представьтесь пожалуйста:</label
@@ -137,7 +133,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </button>
           </div>
           <div class="modal-body">
-            <form id="order_form" method="POST"  enctype="multipart/form-data" action="/php/order_sendMail.php">
+            <form
+              id="order_form"
+              method="POST"
+              enctype="multipart/form-data"
+              action="/php/order_sendMail.php"
+            >
               <div class="form-group">
                 <label for="message-text" class="form-control-label"
                   >Ваше имя (*):</label
@@ -174,17 +175,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   />
                 </div>
               </div>
-			   <div class="form-group">
+              <div class="form-group">
                 <label for="message-text" class="form-control-label"
                   >Телефон:</label
                 >
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
-                    <icon class="fa fa-2x fa-phone" style="color:#c0c0c0"></icon>
+                    <icon
+                      class="fa fa-2x fa-phone"
+                      style="color: #c0c0c0;"
+                    ></icon>
                   </div>
                   &nbsp;
                   <input
-                    type="phone"                    
+                    type="phone"
                     class="form-control"
                     id="recipient-phone"
                     name="recipient-phone"
@@ -222,21 +226,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   name="recipient-message"
                 ></textarea>
               </div>
-			  
-			  <div class="form-group">
-				<input id="download-group-checkbox" type="checkbox" onclick="toggleDownload();"> Загрузить дополнительные документы
-			  </div>
-			  <div id="download-group" class="form-group d-none">			                                             
+
+              <div class="form-group">
+                <input
+                  id="download-group-checkbox"
+                  type="checkbox"
+                  onclick="toggleDownload();"
+                />
+                Загрузить дополнительные документы
+              </div>
+              <div id="download-group" class="form-group d-none">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <icon class="fa fa-2x fa-upload"></icon>
                   </div>
                   &nbsp;
-                  <input					
-                    type="file"                    
+                  <input
+                    type="file"
                     class="form-control"
                     id="recipient-file"
-                    name="recipient-file"                    
+                    name="recipient-file"
                   />
                 </div>
               </div>
@@ -272,7 +281,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </li>
             <li class="nav-item active">
               <a
-				target="_blank"
+                target="_blank"
                 class="nav-link"
                 href="https://nziv.ru/kompetencii/cex-po-proizvodstvu-izdelij-iz-plastmass/"
                 >Производство</a
@@ -319,29 +328,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </nav>
-	<script type="text/javascript">	
-		function toggleDownload(){					
-			let c=document.getElementById('download-group-checkbox');			
-			if (c.checked){
-				document.getElementById('download-group').className=document.getElementById('download-group').className.replace('d-none','');
-				document.getElementById('recipient-file').disabled=false;
-			}else{
-				document.getElementById('download-group').className=document.getElementById('download-group').className+' d-none';
-				document.getElementById('recipient-file').disabled=true;
-			}
-		}
-		document.getElementById('call_me_form').onsubmit=function(){
-			dataLayer.push({'event': 'order_callback'});
-		}
-		document.getElementById('order_form').onsubmit=function(){
-			dataLayer.push({'event': 'order'});
-		}		
-		window.onload=function(){
-			var im = new Inputmask("\\+\\7(999)-999-99-99");
-			im.mask(document.getElementById("recipient_phone"));
-			im.mask(document.getElementById("recipient-phone"));
-		}
-		
-	</script>
+    <script type="text/javascript">
+      function toggleDownload() {
+        let c = document.getElementById("download-group-checkbox");
+        if (c.checked) {
+          document.getElementById(
+            "download-group"
+          ).className = document
+            .getElementById("download-group")
+            .className.replace("d-none", "");
+          document.getElementById("recipient-file").disabled = false;
+        } else {
+          document.getElementById("download-group").className =
+            document.getElementById("download-group").className + " d-none";
+          document.getElementById("recipient-file").disabled = true;
+        }
+      }
+      document.getElementById("call_me_form").onsubmit = function () {
+        dataLayer.push({ event: "order_callback" });
+      };
+      document.getElementById("order_form").onsubmit = function () {
+        dataLayer.push({ event: "order" });
+      };
+      window.onload = function () {
+        var im = new Inputmask("\\+\\7(999)-999-99-99");
+        im.mask(document.getElementById("recipient_phone"));
+        im.mask(document.getElementById("recipient-phone"));
+      };
+    </script>
   </body>
 </html>

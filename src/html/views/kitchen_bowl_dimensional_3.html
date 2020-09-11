@@ -1,5 +1,6 @@
-<% var data = { title: "Лоток вертикальный | АО НЗИВ", author: "Mathetes" }; %>
-<%= _.template(require('./../includes/header.html').default)(data) %>
+<% var data = { title: "Миска мерная для миксера 3,0 л.| АО НЗИВ", author:
+"Mathetes" }; %> <%=
+_.template(require('./../includes/header.html').default)(data) %>
 
 <!-- Page Content -->
 <div class="container wrapper">
@@ -14,11 +15,11 @@
         %>
       </div>
       <h2 class="product__heading animate__animated animate__backInDown">
-        Лоток вертикальный
+        Миска мерная для миксера 3,0 л.
       </h2>
       <div class="image__block animate__animated animate__backInLeft">
         <%=
-        _.template(require('./../includes/office_products/office_vertical_tray_slider.html').default)(data)
+        _.template(require('./../includes/kitchen_products/kitchen_bowl_dimensional_slider.html').default)(data)
         %> <%=
         _.template(require('./../includes/modalorder.html').default)(data) %>
       </div>
@@ -27,7 +28,7 @@
           Характеристики изделия
         </h2>
         <%=
-        _.template(require('./../includes/office_products/office_vertical_tray_table.html').default)(data)
+        _.template(require('./../includes/kitchen_products/kitchen_bowl_dimensional_table.html').default)(data)
         %>
       </div>
     </div>
