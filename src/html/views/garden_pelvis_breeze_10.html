@@ -1,5 +1,4 @@
-<% var data = { title: "Контейнер 5 л. для стирального порошка | АО НЗИВ",
-author: "Mathetes" }; %> <%=
+<% var data = { title: "Таз «Бриз» 8 л.| АО НЗИВ", author: "Mathetes" }; %> <%=
 _.template(require('./../includes/header.html').default)(data) %>
 
 <!-- Page Content -->
@@ -15,11 +14,11 @@ _.template(require('./../includes/header.html').default)(data) %>
         %>
       </div>
       <h2 class="product__heading animate__animated animate__backInDown">
-        Контейнер 5 л. для стирального порошка
+        Таз «Бриз» 8 л.
       </h2>
       <div class="image__block animate__animated animate__backInLeft">
         <%=
-        _.template(require('./../includes/bath_accessories/bath_container_slider.html').default)(data)
+        _.template(require('./../includes/garden_products/garden_pelvis_breeze_slider.html').default)(data)
         %> <%=
         _.template(require('./../includes/modalorder.html').default)(data) %>
       </div>
@@ -28,7 +27,7 @@ _.template(require('./../includes/header.html').default)(data) %>
           Характеристики изделия
         </h2>
         <%=
-        _.template(require('./../includes/bath_accessories/bath_container_table.html').default)(data)
+        _.template(require('./../includes/garden_products/garden_pelvis_breeze_table.html').default)(data)
         %>
       </div>
     </div>
